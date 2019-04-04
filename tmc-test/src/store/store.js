@@ -44,37 +44,5 @@ export const store = new Vuex.Store({
      updateRandomPassword: (state, value) => {
        state.userData.randomPass = value;
      }
-  },
-  // getters: {
-  //   checkFormValid: state => {
-  //     state.formValid = true;
-  //
-  //     if(state.userData.firstName.trim()){
-  //       state.userData.firstNameValid = true;
-  //     } else {
-  //       state.userData.firstNameValid = false;
-  //       state.formValid = false;
-  //     }
-  //
-  //     if(state.userData.lastName.trim()){
-  //       state.userData.lastNameValid = true;
-  //     } else {
-  //       state.userData.lastNameValid = false;
-  //       state.formValid = false;
-  //     }
-  //
-  //     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  //     let em = re.test(String(state.userData.email).toLowerCase());
-  //     if(em){
-  //       state.userData.emailValid = true;
-  //     } else {
-  //       state.userData.emailValid = false;
-  //       state.formValid = false;
-  //     }
-  //
-  //
-  //
-  //
-  //   }
-  // }
+  }
 });

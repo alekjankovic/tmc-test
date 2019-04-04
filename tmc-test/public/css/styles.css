@@ -1,0 +1,49 @@
+body.body-container {
+  background-color: #f0f0f0;
+  padding-top:50px;
+  color:#333;
+}
+
+.form-container {
+  padding-top:20px;
+  min-height: 400px;
+}
+
+.vis-hidden {
+  visibility: hidden;
+}
+
+/* Composite header */
+.composit-header {
+  border-bottom:1px solid #a3a3a3;
+  padding:0;
+  margin-top:30px;
+  margin-bottom:20px;
+
+}
+
+.composit-header-prim {
+  font-size:16px;
+  font-weight: bold;
+  display: block;
+}
+
+.composit-header-sec {
+  font-size:14px;
+  display: block;
+  color:#a3a3a3;
+}
+/* Composite header - END */
+
+/* Bootstrap fix */
+.form-group label {
+  font-size:16px;
+  font-weight: bold;
+  margin-bottom:0;
+}
+
+.form-group.form-check label {
+  font-weight:normal;
+}
+
+/* Bootstrap fix - END */

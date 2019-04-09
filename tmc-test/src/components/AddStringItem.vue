@@ -55,7 +55,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 
 .add-tag-manage {
   display: inline-block;

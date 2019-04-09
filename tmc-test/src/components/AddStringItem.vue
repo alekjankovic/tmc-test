@@ -45,10 +45,6 @@ export default {
     },
     cancelAddTag(){
       this.$emit('cancelAddTag');
-    },
-    onTagInputBlur(event){
-      debugger;
-
     }
   }
 }

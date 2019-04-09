@@ -21,7 +21,7 @@ export const store = new Vuex.Store({
 
     pageManagement: {
       pages:['Basic User Settings', 'Tags'],
-      activepage: 2
+      activepage: 1
     }
   },
   mutations: {

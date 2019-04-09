@@ -14,9 +14,14 @@ export const store = new Vuex.Store({
       password: '',
       randomPass: true,
     },
+    tags: {
+      selectedTags : ['test tag 01', 'test tag 02' ],
+      preloadedTags: ['test tag 01', 'test tag 02','test tag 03','test tag 04','test tag 05','test tag 06','test tag 07']
+    },
+
     pageManagement: {
       pages:['Basic User Settings', 'Tags'],
-      activepage: 1
+      activepage: 2
     }
   },
   mutations: {
@@ -43,6 +48,13 @@ export const store = new Vuex.Store({
      },
      updateRandomPassword: (state, value) => {
        state.userData.randomPass = value;
+     },
+     updateSelectedTags: (state, value) => {
+       for(let i = 0; i < value.length; i++){
+         if(!state.tags.selectedTags.includes(value[i])){
+           state.tags.selectedTags.push(value[i]);
+         }
+       }
      }
   }
 });

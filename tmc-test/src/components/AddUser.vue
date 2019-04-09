@@ -6,7 +6,7 @@
       </div>
       <div class="card-body">
 
-        <CoolB></CoolB>
+        <CoolB v-bind:pages="pages" v-bind:activepage="activepage" v-on:gotoPage="gotoPage"></CoolB>
 
         <div class="form-container">
           <div class="row">
@@ -116,6 +116,12 @@ export default {
     }
   },
   methods:{
+    gotoPage: function(pg){
+      if(pg > this.activepage){
+        this.nextPage();
+      }
+
+    },
     nextPage: function(){
       this.formValid.isFormValid = true;
 
@@ -175,6 +181,12 @@ export default {
 
   },
   computed: {
+    pages(){
+      return this.$store.state.pageManagement.pages
+    },
+    activepage(){
+      return this.$store.state.pageManagement.activepage
+    },
     firstName: {
       get(){
         return this.$store.state.userData.firstName;

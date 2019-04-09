@@ -4,7 +4,7 @@
     <div class="coolb">
       <template v-for="(value, key) in pages">
         <div class="coolb-spacer" v-if="key+1 > 1" ></div>
-        <a class="coolb-circ" v-bind:class="(key+1 === activepage) ? 'active' : ''">
+        <a class="coolb-circ" v-bind:class="(key+1 === activepage) ? 'active' : ''" v-on:click="gotoPage(key+1)">
           {{key + 1}}
           <span class="coolb-txt">{{value}}</span>
         </a>
@@ -17,12 +17,14 @@
 
 export default {
   name: 'CoolB',
-  computed: {
-    pages(){
-      return this.$store.state.pageManagement.pages
-    },
-    activepage(){
-      return this.$store.state.pageManagement.activepage
+  props: {
+    pages: Array,
+    activepage: Number
+  },
+  methods: {
+    gotoPage: function(gotoPg){
+      if(gotoPg != this.activepage)
+        this.$emit('gotoPage', gotoPg );
     }
   }
 }

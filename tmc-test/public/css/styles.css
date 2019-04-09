@@ -47,3 +47,10 @@ body.body-container {
 }
 
 /* Bootstrap fix - END */
+
+.add-tag-btn {
+  cursor:pointer;
+  margin-top: 10px;
+  display: block;
+  float: left;
+}
